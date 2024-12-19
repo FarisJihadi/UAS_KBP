@@ -1,2 +1,10 @@
 # UAS_KBP
 Brain Spark Project Website
+
+Website ini memiliki fitur:
+Pomodoeo Timer
+Task To-Do List
+Learning Resourse For Reference
+Study Statistic to store data on how long the user has been studying
+Spotify Playlist as the source of the playlist being played
+Tech news to find out the latest technology news
