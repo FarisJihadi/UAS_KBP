@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Callback</title>
+  </head>
+  <body>
+    <h1>Processing...</h1>
+    <script>
+      // Ambil access token dari URL hash
+      const hash = window.location.hash.substring(1);
+      const params = new URLSearchParams(hash);
+      const accessToken = params.get("access_token");
+
+      if (accessToken) {
+        console.log("Access Token:", accessToken);
+
+        // Simpan token ke localStorage
+        localStorage.setItem("spotify_access_token", accessToken);
+
+        // Redirect ke halaman utama (index.html)
+        window.location.href = "index.html";
+      } else {
+        document.body.innerHTML =
+          "<h2>Failed to retrieve Access Token. Please try again.</h2>";
+      }
+    </script>
+  </body>
+</html>
